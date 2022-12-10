@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width: 560px) {
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+            }
+        }
+
+        @media screen and (max-width: 516px) {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 196px) {
+            #query-container {
+                max-width: 100%;
+            }
+        }
+
+        div, main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Reviews</h1>
+    <form>
+        <label for="query">Enter Keyword:</label>
+        <input type="text" class="query" id="query-container">
+        <select name="ratings" id="ratings-selector">
+            <option value="None">Choose Rating</option>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+            <option value="NC-17">NC-17</option>
+        </select>
+        <select name="c-p" id="c-p">
+            <option value=" ">Critics Pick</option>
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+        </select>
+        <input type="submit" id="query-submit-btn">
+    </form>
+    <main class="results" id="results-container">
+    
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
